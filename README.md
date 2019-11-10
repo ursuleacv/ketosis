@@ -1,4 +1,4 @@
-# ketosid
+# ketosis
 
 ## Project setup
 ```
