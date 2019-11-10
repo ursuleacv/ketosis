@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1, 
+        "link": "https://www.burnfatnotsugar.com/", 
+        "text": "BURN FAT NOT SUGAR" 
+    },
+    {
+        "id": 2, 
+        "link": "https://thepediet.com/", 
+        "text": "The P:E Diet" 
+    },
+    {
+        "id":3,
+        "link": "https://nutrita.app/",
+        "text": "Nutrita - Search foods' Nutrient Density, Keto Score & Insulin"
+    },
+    {
+        "id":4,
+        "link": "https://www.healthline.com/nutrition/ketogenic-diet-101",
+        "text": "The Ketogenic Diet: A Detailed Beginner's Guide to Keto"
+    }
+]

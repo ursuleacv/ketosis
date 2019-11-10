@@ -3,3 +3,21 @@
     <h1>This is an about page</h1>
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+
+export default {
+  name: "about",
+  components: {
+    
+  },
+  metaInfo: {
+    title: 'About',
+    titleTemplate: '%s ← Ketosis',
+    meta: [
+      {"name": 'description', content: 'About Ketosis'}
+    ]
+  }
+};
+</script>

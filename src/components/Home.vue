@@ -9,11 +9,12 @@
       </li>
     </ul>
   </div>
-
   
 </template>
 
 <script>
+import items from './data.json'
+
 export default {
   name: "Home",
   props: {
@@ -33,10 +34,11 @@ export default {
   },
   methods: {
     fetchData: function () {
-      this.items = [
-          {id: 1, link: 'https://www.burnfatnotsugar.com/', text: 'BURN FAT NOT SUGAR' },
-          {id: 2, link: 'https://thepediet.com/', text: 'The P:E Diet' }
-        ]
+      this.items = items;
+      // this.items = [
+      //     {id: 1, link: 'https://www.burnfatnotsugar.com/', text: 'BURN FAT NOT SUGAR' },
+      //     {id: 2, link: 'https://thepediet.com/', text: 'The P:E Diet' }
+      //   ]
       // var xhr = new XMLHttpRequest()
       // var self = this
       // xhr.open('GET', apiURL + self.currentBranch)
@@ -63,4 +65,5 @@ ul {
 a {
   color: #42b983;
 }
+a:hover{ color: #2a7453;}
 </style>
