@@ -66,7 +66,7 @@ export default {
           self.loading = false;
         })
         .catch(function(error) {
-          console.log("Error getting documents: ", error);
+          // console.log("Error getting documents: ", error);
           self.loading = false;
         });
 

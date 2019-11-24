@@ -46,8 +46,9 @@ export default {
         .auth()
         .createUserWithEmailAndPassword(this.email, this.password)
         .then(
-          function(user) {
-            console.log(user);
+          function() {
+          // function(user) {
+            // console.log(user);
             alert("Your account has been created");
             self.$router.replace("admin/dashboard");
           },

@@ -69,7 +69,7 @@ export default {
   mounted: function() {
     const currentUser = firebase.auth().currentUser;
     this.userId = currentUser.uid;
-    console.log(this.userId);
+    // console.log(this.userId);
   },
   methods: {
     addLink() {
@@ -84,10 +84,10 @@ export default {
           user_id: "/users/" + this.userId
         })
         .then(function(docRef) {
-          console.log("Document written with ID: ", docRef.id);
+          // console.log("Document written with ID: ", docRef.id);
         })
         .catch(function(error) {
-          console.error("Error adding document: ", error);
+          // console.error("Error adding document: ", error);
         });
     }
   }
