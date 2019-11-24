@@ -15,8 +15,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, id) in links"  :key="id">
-          <td><a :href="item.url">{{ item.text }}</a></td>
+        <tr v-for="(item, id) in links" :key="id">
+          <td>
+            <a :href="item.url">{{ item.text }}</a>
+          </td>
           <td>{{ item.created_at }}</td>
           <td></td>
         </tr>
@@ -26,66 +28,65 @@
 </template>
 
 <script>
-import { db } from '../../main'
-import firebase from 'firebase';
+import { db } from "../../main";
+import firebase from "firebase";
 
 export default {
   name: "ListSiteItems",
-  props: {
-    
-  },
-  data () {
+  props: {},
+  data() {
     return {
       links: [],
       loading: true
-    }
+    };
   },
-  mounted: function () {
-    if(localStorage.links ) {
+  mounted: function() {
+    if (localStorage.links) {
       this.links = JSON.parse(localStorage.links);
     } else {
       this.fetchData();
     }
   },
   methods: {
-    fetchData: function () {
+    fetchData: function() {
       const documents = [];
       let self = this;
 
-      db.collection("links").get()
-      .then(function(querySnapshot) {
+      db.collection("links")
+        .get()
+        .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
-              // doc.data() is never undefined for query doc snapshots
-              const docData = doc.data();
-              docData.created_at = self.formatTimeStamp(docData.created_at);
-              documents.push(docData);
+            // doc.data() is never undefined for query doc snapshots
+            const docData = doc.data();
+            docData.created_at = self.formatTimeStamp(docData.created_at);
+            documents.push(docData);
           });
 
           // localStorage.setItem('sites', JSON.stringify(documents));
           self.loading = false;
-      })
-      .catch(function(error) {
+        })
+        .catch(function(error) {
           console.log("Error getting documents: ", error);
           self.loading = false;
-      });
-      
-      firebase.analytics().logEvent('sites_retrieved');
+        });
+
+      firebase.analytics().logEvent("sites_retrieved");
 
       this.links = documents;
     },
-    formatTimeStamp: function(timestamp){
-      return Intl.DateTimeFormat('en-US',{
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
+    formatTimeStamp: function(timestamp) {
+      return Intl.DateTimeFormat("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
       }).format(new Date(timestamp.toDate()));
-    },
-  },
-  firestore () {
-    return {
-      links: db.collection('links').orderBy('created_at'), 
-      // readyCallback: () => this.loading = false
     }
+  },
+  firestore() {
+    return {
+      links: db.collection("links").orderBy("created_at")
+      // readyCallback: () => this.loading = false
+    };
   }
 };
 // https://medium.com/vue-mastery/full-stack-vue-js-with-firestore-62e2fe2ec1f3
@@ -101,5 +102,4 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-
 </style>

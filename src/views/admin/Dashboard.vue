@@ -18,20 +18,23 @@ import AddSiteItem from "@/components/admin/AddSiteItem.vue";
 
 // import ListSiteItemsAir from "@/components/admin/ListSiteItemsAir.vue";
 
-import firebase from 'firebase';
+import firebase from "firebase";
 
 export default {
   name: "dashboard",
   components: {
     ListSiteItems,
-    AddSiteItem,
+    AddSiteItem
     // ListSiteItemsAir
   },
   methods: {
-    logOut: function(){
-      firebase.auth().signOut().then(() => {
-        this.$router.replace('home');
-      });
+    logOut: function() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.replace("home");
+        });
     }
   }
 };

@@ -9,7 +9,10 @@
     </thead>
     <tbody>
       <tr v-for="record in records" :key="record.id">
-        <td v-for="(col, colIndex) in columns" :key="record.id + '-' + colIndex">
+        <td
+          v-for="(col, colIndex) in columns"
+          :key="record.id + '-' + colIndex"
+        >
           {{ record.fields[col] }}
         </td>
       </tr>
@@ -18,38 +21,34 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   name: "ListSiteItemsAir",
-  props: [
-    'columns',
-    'filter',
-    'sort',
-  ],
-  data () {
+  props: ["columns", "filter", "sort"],
+  data() {
     return {
-      apiUrl: 'https://api.airtable.com/v0/',
-      apiKey: 'keynhXaxWOSmSo05h', // Always use a read-only account token
-      base: 'appSn3xo7fG3NuokC/Links',
+      apiUrl: "https://api.airtable.com/v0/",
+      apiKey: process.env.VUE_APP_AIRTABLE_API_KEY, // Always use a read-only account token
+      base: "appSn3xo7fG3NuokC/Links",
       records: []
     };
   },
-  mounted: function () {
+  mounted: function() {
     this.fetchData();
   },
   methods: {
-    fetchData: function () {
+    fetchData: function() {
       axios({
         url: this.apiUrl + this.base,
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`
+          Authorization: `Bearer ${this.apiKey}`
         },
         params: {
-          filterByFormula: this.filter || '',
-          sort: this.sort || ''
+          filterByFormula: this.filter || "",
+          sort: this.sort || ""
         }
-      }).then((res) => {
+      }).then(res => {
         this.records = res.data.records;
       });
     }
@@ -67,5 +66,4 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-
 </style>

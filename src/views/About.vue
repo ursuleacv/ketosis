@@ -9,15 +9,13 @@
 
 export default {
   name: "about",
-  components: {
-    
-  },
+  components: {},
   metaInfo: {
-    title: 'About',
-    titleTemplate: '%s ← Ketosis',
+    title: "About",
+    titleTemplate: "%s ← Ketosis",
     meta: [
-      {"name": 'description', content: 'About Ketosis'},
-      
+      { name: "description", content: "About Ketosis" }
+
       // OpenGraph data (Most widely used)
       // {property: 'og:title', content: 'My Page Title ← My Site'},
       // {property: 'og:site_name', content: 'My Site'},
@@ -41,7 +39,7 @@ export default {
       // {itemprop: 'name', content: 'My Page Title ← My Site'},
       // {itemprop: 'description', content: 'I have things here on my site.'},
       // {itemprop: 'image', content: 'https://www.my-site.com/my-special-image.jpg'},
-    ],
+    ]
     // link: [
     //   {rel: 'canonical', href: 'https://www.my-site.com/my-special-page'}
     // ]

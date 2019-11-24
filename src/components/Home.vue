@@ -4,16 +4,15 @@
     <h3></h3>
 
     <ul>
-      <li v-for="item in items"  :key="item.id" :item="item">
+      <li v-for="item in items" :key="item.id" :item="item">
         <a :href="item.link">{{ item.text }}</a>
       </li>
     </ul>
   </div>
-  
 </template>
 
 <script>
-import items from './data.json'
+import items from "./data.json";
 
 export default {
   name: "Home",
@@ -21,19 +20,19 @@ export default {
     msg: String,
     item: Object
   },
-  data: function(){
+  data: function() {
     return {
       items: []
-    }
+    };
   },
-  created: function () {
-    this.fetchData()
+  created: function() {
+    this.fetchData();
   },
-  mounted: function () {
-    this.fetchData()
+  mounted: function() {
+    this.fetchData();
   },
   methods: {
-    fetchData: function () {
+    fetchData: function() {
       this.items = items;
       // this.items = [
       //     {id: 1, link: 'https://www.burnfatnotsugar.com/', text: 'BURN FAT NOT SUGAR' },
@@ -65,5 +64,7 @@ ul {
 a {
   color: #42b983;
 }
-a:hover{ color: #2a7453;}
+a:hover {
+  color: #2a7453;
+}
 </style>
