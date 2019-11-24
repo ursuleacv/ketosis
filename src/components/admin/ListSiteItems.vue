@@ -66,6 +66,7 @@ export default {
           self.loading = false;
         })
         .catch(function(error) {
+          alert(error);
           // console.log("Error getting documents: ", error);
           self.loading = false;
         });

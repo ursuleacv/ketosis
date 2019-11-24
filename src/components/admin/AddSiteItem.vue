@@ -83,10 +83,12 @@ export default {
           category: this.category,
           user_id: "/users/" + this.userId
         })
-        .then(function(docRef) {
+        .then(function() {
+          // .then(function(docRef) {
           // console.log("Document written with ID: ", docRef.id);
         })
         .catch(function(error) {
+          alert(error);
           // console.error("Error adding document: ", error);
         });
     }

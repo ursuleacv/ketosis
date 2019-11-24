@@ -45,7 +45,7 @@ export default {
         .signInWithEmailAndPassword(this.email, this.password)
         .then(
           function() {
-          // function(user) {
+            // function(user) {
             // console.log(user);
             // alert('Logged In successfully');
             self.$router.replace("admin/dashboard");
