@@ -2,17 +2,20 @@
   <div class="home">
     <img alt="Ketosis logo" src="../assets/logo.svg" width="100px" />
     <Home msg="Don’t blame FAT for what the SUGAR did!" />
+    <CacheSites></CacheSites>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Home from "@/components/Home.vue";
+import CacheSites from "@/components/admin/CacheSites.vue";
 
 export default {
   name: "home",
   components: {
-    Home
+    Home,
+    CacheSites
   },
   metaInfo: {
     // Children can override the title.
