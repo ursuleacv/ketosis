@@ -1,22 +1,43 @@
-[
-    {
-        "id": 1, 
-        "link": "https://www.burnfatnotsugar.com/", 
-        "text": "BURN FAT NOT SUGAR" 
+[{
+        "category": "Websites",
+        "id": "22vEKKKMMjOPlwoanw35",
+        "text": "BURN FAT NOT SUGAR",
+        "url": "https://www.burnfatnotsugar.com/"
     },
     {
-        "id": 2, 
-        "link": "https://thepediet.com/", 
-        "text": "The P:E Diet" 
+        "category": "Websites",
+        "id": "4jUURqXiwuNP24zZtQbA",
+        "text": "Muscle-centric Medicine",
+        "url": "https://drgabriellelyon.com"
     },
     {
-        "id":3,
-        "link": "https://nutrita.app/",
-        "text": "Nutrita - Search foods' Nutrient Density, Keto Score & Insulin"
+        "category": "Websites",
+        "id": "Lw12iDxrvvRQzuivsI1m",
+        "text": "The P:E Diet",
+        "url": "https://thepediet.com/"
     },
     {
-        "id":4,
-        "link": "https://www.healthline.com/nutrition/ketogenic-diet-101",
-        "text": "The Ketogenic Diet: A Detailed Beginner's Guide to Keto"
+        "category": "Websites",
+        "id": "PNuZ8mPNJ0g1NprNo8Km",
+        "text": "Nutrita - Search foods' Nutrient Density, Keto Score & Insulin",
+        "url": "https://nutrita.app/"
+    },
+    {
+        "category": "Websites",
+        "id": "d16D8fupL7iE3vsjN34s",
+        "text": "The Ketogenic Diet: A Detailed Beginner's Guide to Keto",
+        "url": "https://www.healthline.com/nutrition/ketogenic-diet-101"
+    },
+    {
+        "category": "Websites",
+        "id": "eSmNMcR7hPy5YJUQVosN",
+        "text": "Dr. Paul Saladino explains the carnivore diet",
+        "url": "https://carnivoremd.com/"
+    },
+    {
+        "category": "Podcasts",
+        "id": "ga7dwvO4Yr0MjSqdVUNP",
+        "text": "The Keto Answers Podcast",
+        "url": "https://perfectketo.com/podcast/"
     }
 ]

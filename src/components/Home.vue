@@ -5,7 +5,7 @@
 
     <ul>
       <li v-for="item in items" :key="item.id" :item="item">
-        <a :href="item.link">{{ item.text }}</a>
+        <a :href="item.url">{{ item.text }}</a>
       </li>
     </ul>
   </div>
