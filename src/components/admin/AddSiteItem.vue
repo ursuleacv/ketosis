@@ -37,6 +37,7 @@
               <option value="Websites">Websites</option>
               <option value="Podcasts">Podcasts</option>
               <option value="Apps">Apps</option>
+              <option value="Videos">Videos</option>
             </select>
           </div>
 
